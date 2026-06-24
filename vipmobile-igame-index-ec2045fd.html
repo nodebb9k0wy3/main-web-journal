@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f6f1ea;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            color: #2e2a27;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fcf9f5;
+            border-radius: 28px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.04);
+            padding: 2.5rem 2.2rem 3rem;
+        }
+        @media (max-width: 480px) {
+            .page {
+                padding: 1.8rem 1.2rem 2.2rem;
+            }
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 2.8rem;
+        }
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1f1b18;
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #6e635b;
+            border-left: 4px solid #c6b4a2;
+            padding-left: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        /* 区块通用 */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #2c2622;
+            margin-bottom: 0.9rem;
+            border-bottom: 1px solid #e3d7cc;
+            padding-bottom: 0.3rem;
+        }
+        p {
+            margin-bottom: 1.1rem;
+        }
+
+        /* 引用块 / 提示框 */
+        .inset-box {
+            background: #f0eae2;
+            border-radius: 14px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.2rem 0 1.8rem;
+            border-left: 6px solid #b09781;
+        }
+        .inset-box p:last-child {
+            margin-bottom: 0;
+        }
+        .tip {
+            background: #e9e0d6;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            font-size: 0.95rem;
+            color: #3d352f;
+            display: flex;
+            gap: 0.6rem;
+            align-items: flex-start;
+            margin: 1.2rem 0;
+        }
+        .tip::before {
+            content: "💡";
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        /* 列表 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 0.8rem 0 1.5rem;
+        }
+        .feature-item {
+            background: #f4efe8;
+            border-radius: 16px;
+            padding: 1rem 1.3rem;
+            flex: 1 1 200px;
+        }
+        .feature-item strong {
+            display: block;
+            font-weight: 500;
+            color: #3d332c;
+            margin-bottom: 0.2rem;
+        }
+        .feature-item span {
+            font-size: 0.95rem;
+            color: #5b5047;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            background: #f5efea;
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+        }
+        .faq-summary details {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #d6c9bc;
+            padding-bottom: 0.6rem;
+        }
+        .faq-summary details:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .faq-summary summary {
+            cursor: pointer;
+            font-weight: 450;
+            color: #3a332e;
+            padding: 0.15rem 0;
+        }
+        .faq-summary summary::marker {
+            color: #9f8b7a;
+        }
+        .faq-summary p {
+            margin: 0.5rem 0 0.2rem 0.3rem;
+            font-size: 0.95rem;
+            color: #4d443c;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            margin-top: 2.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e0d4c8;
+            font-size: 0.9rem;
+            color: #6a5f56;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.6rem;
+        }
+        .footer-links a {
+            color: #6a4f3b;
+            text-decoration: none;
+            border-bottom: 1px solid #d4c1b0;
+            transition: border-color 0.15s;
+        }
+        .footer-links a:hover {
+            border-bottom-color: #4d3628;
+            color: #3f2e22;
+        }
+        .inline-link {
+            color: #6a4f3b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #d0bcaa;
+            text-decoration-thickness: 1px;
+        }
+        .inline-link:hover {
+            text-decoration-color: #6a4f3b;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- Hero -->
+    <div class="hero">
+        <h1>爱游戏 · 简明指南</h1>
+        <div class="sub">一站了解使用前需要知道的事</div>
+    </div>
+
+    <!-- 引言 + 提示框 -->
+    <p>很多朋友第一次接触游戏类平台时，往往会被铺天盖地的功能介绍淹没。其实，最要紧的不是记住所有按钮，而是先弄清楚几个基本规则。下面这份笔记，就是帮你快速建立起对 <a href="https://vipmobile-igame.com" class="inline-link">爱游戏</a> 的清晰印象——从访问方式到常见疑问，一口气理清。</p>
+
+    <div class="tip">
+        <span>建议先读完这篇指南，再打开页面操作，可以省去不少摸索时间。</span>
+    </div>
+
+    <!-- 优势区：简明特点 -->
+    <section>
+        <h2>几个值得留意的特点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>入口直接</strong>
+                <span>无需繁琐注册步骤，打开即用核心功能，降低上手门槛。</span>
+            </div>
+            <div class="feature-item">
+                <strong>界面聚焦</strong>
+                <span>没有多余弹窗干扰，信息层级清晰，找功能不费力。</span>
+            </div>
+            <div class="feature-item">
+                <strong>适配移动端</strong>
+                <span>手机浏览器访问时布局自动调整，横竖屏都能正常浏览。</span>
+            </div>
+        </div>
+        <p>以上三点看似基础，但不少同类产品反而容易忽略。保持简洁，本身就是一种效率。</p>
+    </section>
+
+    <!-- 说明区：场景与提醒 -->
+    <section>
+        <h2>什么时候会用到？</h2>
+        <p>不论你是想在通勤时快速刷一下内容，还是在家用平板慢慢浏览，<a href="https://vipmobile-igame.com" class="inline-link">爱游戏</a> 都倾向于让操作保持轻量。没有强制下载的客户端，也没有弹不完的引导——你打开链接，就能直接看到主要模块。</p>
+
+        <div class="inset-box">
+            <p><strong>一个小提醒：</strong>部分功能可能依赖浏览器对某些特性的支持。如果遇到页面显示异常，可以先试试更新浏览器版本，或切换至 Chrome、Edge、Safari 等主流浏览器。Wi-Fi 环境下载入速度会更快，尤其首次加载时资源会稍多。</p>
+        </div>
+
+        <p>另外，如果你习惯用微信或QQ内置浏览器，可能会遇到登录或跳转不顺畅的情况。这时候改用系统自带浏览器就能解决。不是网站的问题，是内置浏览器对一些交互方式有限制。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见疑问 · 摘要</h2>
+        <div class="faq-summary">
+            <details>
+                <summary>需要注册账号吗？</summary>
+                <p>大部分内容可以直接浏览，部分偏好设置或记录功能可能需要简单登录。整个过程不需要提供敏感信息，按页面提示操作即可。</p>
+            </details>
+            <details>
+                <summary>手机和电脑体验一样吗？</summary>
+                <p>核心功能完全一致，只是屏幕布局会有自适应调整。推荐在手机端使用时开启横屏模式，浏览体验会更接近桌面版。</p>
+            </details>
+            <details>
+                <summary>页面加载慢怎么办？</summary>
+                <p>先确认网络连接正常，然后尝试刷新一次。如果依旧缓慢，可以清除浏览器缓存或使用无痕模式重试。极少数情况下，部分地区的运营商可能对境外服务器有限速，可尝试切换网络环境。</p>
+            </details>
+            <details>
+                <summary>有没有付费项目？</summary>
+                <p>基础浏览和常用功能都是免费的。部分扩展服务或增值内容可能会在页面内明确标注，使用时按需选择即可，没有任何隐藏扣费。</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- 底部链接 + 附加说明 -->
+    <div class="footer-links">
+        <span>更多信息请参考 <a href="https://vipmobile-igame.com">爱游戏</a></span>
+        <span style="color:#9b8b7e;">简明指南 · 版本 2025</span>
+    </div>
+
+    <!-- 尾注：克制收束 -->
+    <p style="margin-top: 1.6rem; font-size: 0.9rem; color: #7d7268; border-top: 1px solid #ece3da; padding-top: 1rem;">
+        最后说一句：工具只是工具，花点时间熟悉规则，比收藏一堆教程更有用。希望这份指南能让你的初次体验更顺畅。
+    </p>
+</div>
+</body>
+</html>
